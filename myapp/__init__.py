@@ -33,5 +33,7 @@ def register():
 def login():
 	render_template('Hi')
 
+
+
 if __name__ == '__main__':
 	app.run()
