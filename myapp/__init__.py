@@ -1,18 +1,15 @@
 from flask import Flask, render_template, request 
 from .views.borrow import borrow
-from .views.circle import circle
 from .views.home import home
 from views.lend import lend
 from .views.user import user
 from forms import RegisterForm
-from models import User, db_sessiorcle.route('/')
-from models import Users, Usersession
+from models import User, Usersession
 app = Flask(__name__)
 
 
 app.register_blueprint(borrow, url_prefix='/borrow')
 app.register_blueprint(lend, url_prefix='/lend')
-app.register_blueprint(circle, url_prefix='/circle')
 app.register_blueprint(home, url_prefix='/home')
 app.register_blueprint(user, url_prefix='/user')
 
@@ -31,9 +28,13 @@ def register():
 
 @app.route('/login')
 def login():
-	render_template('Hi')
-
-
+	return ('Hi')
+@app.route('/')
+def index():
+	return render_template('index.html')
+@app.route('/check')
+def check():
+	return render_template('base.html')
 
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)

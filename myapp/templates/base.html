@@ -1,0 +1,56 @@
+<head>
+<title>Loan It</title>
+<link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{url_for('static', filename='js/jquery-1.11.0.min.js')}}"></script>
+<!-- Custom Theme files -->
+<link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/semantic.min.css')}}">
+<script type="text/javascript" src="{{url_for('static', filename='css/semantic.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='css/semantic.js')}}"></script>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/semantic.css')}}">
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }>
+</script>
+<meta name="keywords" content="Your App Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndriodCompatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="{{url_for('static', filename='js/move-top.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/easing.js')}}"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+<!-- //end-smoth-scrolling -->
+<script src="{{url_for('static', filename='js/menu_jquery.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='css/flexslider.css')}}" type="text/css" media="screen" />
+</head>
+<body>
+<!--header start here-->
+<div class="ui secondary  menu">
+
+  <a class="active item">
+    Home
+  </a>
+
+  <a class="item">
+    Borrow
+  </a>
+  <a class="item">
+    Lend
+  </a>
+  <div class="right menu">
+    
+    <a class="ui item">
+      Logout
+    </a>
+  </div>
+</div>
