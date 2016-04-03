@@ -49,11 +49,11 @@ class Usersession(object):
 class PaymentSession(object):
 	'''This database payments is managing the present things and not the previous transactions of the user. '''
 	def __init__(self):
+		import os
+		os.chdir('/home/ferbncode/ferbncode/code/myapp')
 		self.bpaymentDATABASE = './borrowerpayments.db'
 		self.conn = sqlite3.connect(self.bpaymentDATABASE)
 		self.c = self.conn.cursor()
-		#Use dictionary for outputs
-		self.c.rowfactory = sqlite3.row
 		self._getdetails = """SELECT * FROM payments WHERE username = ?"""
 		self._adddetails = """INSERT INTO payments(accountno, Amount, interest, noofDays, remainingdays,
 		remainingamount, username, complete) VALUES (?,?,?,?,?,?,?,?)"""
@@ -74,7 +74,7 @@ class PaymentSession(object):
 
 	def render_feed(self):
 		self.c.execute(self._renderfeed)
-		x = c.fetchall()
+		x = self.c.fetchall()
 		#return a list of dictionary of items
 		return x
 

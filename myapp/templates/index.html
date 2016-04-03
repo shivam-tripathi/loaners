@@ -74,30 +74,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</script>
 			<!---- script-nav ---->
 				<div class="top-nav-right">
+
 					<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
 						    <div id="loginBox">                
-						        <form id="loginForm">
+						        <form id="loginForm" method="post">
 						                <fieldset id="body">
 						                	<fieldset>
-						                          <label for="email">Email Address</label>
-						                          <input type="text" name="email" id="email">
+						                          <label for="email">Username</label>
+						                          <input type="text" name="username" id="username" value="{{request.form.username}}">
 						                    </fieldset>
 						                    <fieldset>
 						                            <label for="password">Password</label>
-						                            <input type="password" name="password" id="password">
+						                            <input type="password" name="password" id="password" value="{{request.form.password}}">
 						                     </fieldset>
 						                    <input type="submit" id="login" value="Sign in">
 						                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
 						            	</fieldset>
 						            <span><a href="#">Forgot your password?</a></span>
+						            
 							 </form>
 				        </div>
+
 				</div>
+
 		         <div class="clearfix"> </div>
 			</div>
 		 </div>
+
 		 <div class="clearfix"> </div>
 	  </div>
+	  <div>
+						            	{% with messages = get_flashed_messages() %}
+  										{% if messages %}
+    									{% for message in messages %}
+    									<div class="alert alert-danger" role="alert">
+      										<p class="text-center">{{ message }}</p></div>
+    									{% endfor %}
+    									</ul>
+  										{% endif %}
+										{% endwith %}
+						            </div>
 		 <div class="banner-bottom">
 		 	<h4>Get the best loans and the best profits.</h4>
 		 	<h3>Our peer-to-peer system has everything to do the whole work</h3>
@@ -703,9 +719,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--copy right start here-->
 <div class="copy-right-main">
 	<div class="container">
-        <div class="copy-right">
-			<p><a target="_blank">Scroll up</a></p>
-		</div>
 		<script type="text/javascript">
 										$(document).ready(function() {
 											/*

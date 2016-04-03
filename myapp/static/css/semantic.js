@@ -20,6 +20,11 @@
  */
 ;(function ( $, window, document, undefined ) {
 
+$('#progress1').progress({
+  percent: 22
+});
+$('#progress1').progress();
+
 $.site = $.fn.site = function(parameters) {
   var
     time           = new Date().getTime(),
